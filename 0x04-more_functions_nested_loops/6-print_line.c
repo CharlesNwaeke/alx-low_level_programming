@@ -1,15 +1,27 @@
 #include "main.h"
+
 /**
- * print_line - prints a line
+ * print_line - entry point
  *
- * @n: integer to print stuff?
+ * Description: Prints lines
+ *@n: number of lines
+ * Return: void
  */
+
 void print_line(int n)
 {
-	int i;
+	int num_lines;
 
-	for (i = 0; i < n; i++)
+	if (n <= 0)
 	{
-		_putchar('_');
+		_putchar('\n');
 	}
-	_putchar('\n');
+	else
+	{
+		for (num_lines = 1; num_lines <= n; num_lines++)
+		{
+			_putchar('_');
+		}
+		_putchar('\n');
+	}
+}
